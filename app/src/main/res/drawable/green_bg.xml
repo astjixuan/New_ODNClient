@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按下时 -->
+    <item android:state_pressed="true">
+
+        <shape android:shape="rectangle">
+
+            <!-- 圆角 -->
+            <corners android:bottomLeftRadius="10dp"
+                android:bottomRightRadius="10dp"
+                android:topLeftRadius="10dp"
+                android:topRightRadius="10dp" />
+
+            <!-- 内部填充色 -->
+            <solid android:color="@color/indicator_color_2" />
+        </shape>
+
+    </item>
+
+    <!-- 可用的状态 -->
+    <item android:state_enabled="true">
+
+        <shape android:shape="rectangle">
+
+            <!-- 圆角 -->
+            <corners android:bottomLeftRadius="10dp"
+                android:bottomRightRadius="10dp"
+                android:topLeftRadius="10dp"
+                android:topRightRadius="10dp" />
+
+            <!-- 渐变色 -->
+            <gradient android:type="linear"
+                android:angle="45"
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:startColor="@color/green1"
+                android:centerColor="@color/green2"
+                android:endColor="@color/colorPrimary" />
+
+        </shape>
+
+    </item>
+
+</selector>

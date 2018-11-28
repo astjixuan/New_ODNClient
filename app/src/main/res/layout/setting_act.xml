@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/shape_gray_bg"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <TextView
+            android:textColor="@color/blue"
+            android:layout_margin="20dp"
+            android:textSize="20sp"
+            android:text="@string/ip_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/setting_net_ip_edit"
+                android:background="@drawable/edit_bg"
+                android:layout_width="200dp"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:textColor="@color/blue"
+            android:layout_margin="20dp"
+            android:textSize="20sp"
+            android:text="@string/ip_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/setting_net_port_edit"
+            android:inputType="number"
+            android:background="@drawable/edit_bg"
+            android:layout_marginStart="20dp"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/setting_net_connectBtn"
+            android:background="@drawable/green_bg"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:text="@string/connect_test"
+            android:layout_margin="20dp"
+            android:layout_gravity="right"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+</LinearLayout>
