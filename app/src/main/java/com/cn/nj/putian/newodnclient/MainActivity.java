@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.cn.nj.putian.newodnclient.ui.login.view.LoginActivity;
+import com.cn.nj.putian.newodnclient.ui.login.view.SettingNetActivity;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 if(count == 4)
                 {
                     //去登陆页面
-                    intent.setClass(MainActivity.this,LoginActivity.class);
+                    intent.setClass(MainActivity.this,SettingNetActivity.class);
                     startActivity(intent);
                     finish();
                 }
