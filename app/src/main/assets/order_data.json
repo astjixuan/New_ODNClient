@@ -1,0 +1,67 @@
+[
+  {
+    "type": "container-fourColumn",  //预定义卡片类型-网格布局(4格)
+    "viewName":"网格布局",//自定义
+    "style": {  //该卡片的一些样式及属性
+      "margin":[5,5,5,5],
+      "padding":[10,10,10,10]
+    },
+    "items": [  //该卡片内的一些组件
+      {
+        "type": 1, // 第一个组件的类型，必须是已经注册过的；未被注册过的将会被忽略
+        "msg": "二维码", // 该对应组件的相关数据等
+        "imgName":"ic_category_2",
+        "style": {}
+      },
+      {
+        "type": 1,
+        "msg": "info2",
+        "imgName":"ic_category_13",
+        "style": {}
+      },
+      {
+        "type": 1,
+        "msg": "info3",
+        "imgName":"ic_category_14",
+        "style": {}
+      },
+      {
+        "type": 1,
+        "msg": "info4",
+        "imgName":"ic_category_16",
+        "style": {}
+      }
+    ]
+  }
+  ,
+  {
+    "type":"container-sticky",
+    "viewName":"吸顶布局",
+    "style":{
+      "sticky": "start"
+    },
+    "items":[
+      {
+        "type": "3"
+      }
+    ]
+  }
+  ,
+  {
+    "type": "container-scrollFix",
+    "viewName":"固定布局",
+    "style": {
+      "showType": "showOnLeave",
+      "x":30,
+      "y":300,
+      "align":"bottom_right"
+    },
+    "items": [
+      {
+        "type": 2,
+        "msg": "返回顶部"
+      }
+    ]
+  }
+  //以上都是基本数据，后面动态添加工单数据
+]

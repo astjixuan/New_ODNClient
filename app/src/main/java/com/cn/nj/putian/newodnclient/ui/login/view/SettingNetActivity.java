@@ -12,18 +12,16 @@ import com.cn.nj.putian.newodnclient.R;
 import com.cn.nj.putian.newodnclient.base.mvp.BaseMvpActivity;
 import com.cn.nj.putian.newodnclient.ui.login.contract.SettingNetContract;
 import com.cn.nj.putian.newodnclient.ui.login.presenter.SettingNetPresenter;
-import com.cn.nj.putian.newodnclient.widget.SnackbarTools;
 
 /**
  * 设置网络链接
  * pin ip地址
  */
-public class SettingNetActivity extends BaseMvpActivity<SettingNetPresenter> implements SettingNetContract.View,View.OnClickListener {
+public final class SettingNetActivity extends BaseMvpActivity<SettingNetPresenter> implements SettingNetContract.View, View.OnClickListener {
 
     private EditText ipTV,portTV;
     private ProgressDialog mProgressDialog;
     private View mainView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,7 +115,13 @@ public class SettingNetActivity extends BaseMvpActivity<SettingNetPresenter> imp
     public void onClick(View v) {
         if(v.getId() == R.id.setting_net_connectBtn) {
             //测试连接网络
-            showError("测试玩玩！");
+            String ip = ipTV.getText().toString().trim();
+            String port = portTV.getText().toString().trim();
+            if(mPresenter.checkIp(ip) && mPresenter.checkPort(port)) {
+                mPresenter.connectTest(ip,port);
+            } else {
+                showError("验证不通过！");
+            }
         }
     }
 }

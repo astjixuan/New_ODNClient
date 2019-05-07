@@ -4,7 +4,6 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
-
     <!--主题颜色-->
     <color name="colorTheme">#252525</color>
     <!--字体的颜色，纯黑色-->
@@ -17,6 +16,8 @@
     <color name="blackText3">#212121</color>
     <!--字体的颜色 黑色4-->
     <color name="blackText4">#323232</color>
+    <!--字体的颜色 黑色5-->
+    <color name="blackText5">#111111</color>
     <!--item的水波纹颜色，灰色1-->
     <color name="itemBackground">#DD7D7D7D</color>
     <!--灰色2-->
@@ -80,9 +81,23 @@
     <color name="blue2">#0066cc</color>
     <color name="blue3">#005ab5</color>
     <color name="blue4">#00cccc</color>
+    <color name="blue5">#2B81EB</color>
+
 
     <!-- 绿色渐变 -->
     <color name="green1">#ff00ff00</color>
     <color name="green2">#8000ff00</color>
     <color name="green3">#1000ff00</color>
+
+    <color name="yellow1">#FFFF00</color>
+    <color name="yellow2">#EEEE00</color>
+    <color name="yellow3">#CDCD00</color>
+    <color name="yellow4">#8B8B00</color>
+
+    <color name="gold1">#FFD700</color>
+    <color name="gold2">#EEC900</color>
+    <color name="gold3">#CDAD00</color>
+
+    <color name="purple1">#3F51B5</color>
+    <color name="purple2">#3F51B5</color>
 </resources>

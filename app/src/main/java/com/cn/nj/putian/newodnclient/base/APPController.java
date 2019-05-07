@@ -4,6 +4,8 @@ import android.app.Application;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import com.blankj.utilcode.util.Utils;
+import com.cn.nj.putian.newodnclient.base.common.CommonConst;
 import com.squareup.leakcanary.LeakCanary;
 
 /**
@@ -22,6 +24,10 @@ public class APPController extends Application {
 //        if(null != db) {
 //            db.close();
 //        }
+
+        //初始化工具类
+        Utils.init(this);
+        CommonConst.initIconMap();//图标初始化
 
         //内存检测
         if (LeakCanary.isInAnalyzerProcess(this)) {

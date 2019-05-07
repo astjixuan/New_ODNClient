@@ -3,6 +3,21 @@
     <string name="ip_address">IP地址</string>
     <string name="ip_port">端口号</string>
     <string name="connect_test">连接测试</string>
+    <string name="user_pass">密码</string>
+    <string name="user_name">用户名</string>
+    <string name="login_title">欢迎登录智能ODN</string>
+    <string name="login_btnStr">登录</string>
+    <string name="login_settingStr">设置网络</string>
 
+    <array name="order_spinner_array">
+        <item>排序方式</item>
+        <item>局所</item>
+        <item>时间</item>
+    </array>
 
+    <array name="order_spinner_array2">
+        <item>筛选工单</item>
+        <item>没完成</item>
+        <item>故障</item>
+    </array>
 </resources>

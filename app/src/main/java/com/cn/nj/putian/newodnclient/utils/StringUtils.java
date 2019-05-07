@@ -4,6 +4,8 @@ package com.cn.nj.putian.newodnclient.utils;
 import android.util.Log;
 
 
+import com.cn.nj.putian.newodnclient.base.common.CommonConst;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -564,35 +566,16 @@ public final class StringUtils {
      */
 //    public static String getOrderTypeVal(String orderType) {
 //        String val = "";
-//        if (orderType.equals(CommonConst.orderType_new)
-//                || orderType.equals(CommonConst.orderType_new_four)
-//                || orderType.equals(CommonConst.orderType_new_three)) {
-//            val = "新建";
-//        } else if (orderType.equals(CommonConst.orderType_change)
-//                || orderType.equals(CommonConst.orderType_change_four)
-//                || orderType.equals(CommonConst.orderType_change_three)) {
-//            val = "改跳";
-//        } else if (orderType.equals(CommonConst.orderType_del)
-//                || orderType.equals(CommonConst.orderType_del_four)
-//                || orderType.equals(CommonConst.orderType_del_three)) {
-//            val = "拆除";
-//        } else if (orderType.equals(CommonConst.orderType_polling)) {
-//            val = "巡检";
-//        } else if(orderType.equals(CommonConst.orderType_gather)){
-//            val = "采集";
-//        } else if(orderType.equals(CommonConst.orderType_B_NEW)) {
-//            val = "批量新建";
-//        } else if(orderType.equals(CommonConst.orderType_2B_NEW)) {
-//            val = "批量新建(架间)";
-//        } else if(orderType.equals(CommonConst.orderType_setting)) {
-//            val = "配置工单";
-//        } else if(orderType.equals(CommonConst.orderType_3B_NEW)
-//                || orderType.equals(CommonConst.orderType_4B_NEW)) {
-//            val = "双纤新建";
-//        } else if(orderType.equals(CommonConst.orderType_SWAP)) {
-//            val = "调纤工单";
+//        if (orderType.equals(CommonConst.orderType_NEW)) {
+//            val = "新";
+//        } else if (orderType.equals(CommonConst.orderType_CHANGE)) {
+//            val = "改";
+//        } else if (orderType.equals(CommonConst.orderType_DEL)) {
+//            val = "拆";
+//        } else if(orderType.equals(CommonConst.orderType_SETTING)) {
+//            val = "配置";
 //        } else {
-//            val = "软件升级";
+//            val = "升级";
 //        }
 //        return val;
 //    }

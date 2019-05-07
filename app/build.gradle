@@ -1,15 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     buildToolsVersion "28.0.3"
 
     defaultConfig {
         applicationId "com.cn.nj.putian.newodnclient"
         minSdkVersion 22
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        targetSdkVersion 28
         //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -27,21 +25,27 @@ dependencies {
     //androidTestImplementation 'com.android.support.test:runner:1.0.2'
     //androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     //官方库
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:support-v4:27.1.1'
-    implementation 'com.android.support:recyclerview-v7:27.1.1'
-    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
     //第三方框架
-    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    //implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar' //底部tab
     implementation 'com.blankj:utilcode:1.22.0'
     //事件总线
     implementation 'org.greenrobot:eventbus:3.1.1'
-    //vlayout
-    implementation('com.alibaba.android:vlayout:1.2.8@aar') {
-        transitive = true
-    }
-    //jdom2
-    implementation 'org.jdom:jdom2:2.0.6'
+    //图片加载工具
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    //badgeview
+    implementation 'q.rorbin:badgeview:1.1.3'
+    //Tangram
+    implementation 'com.alibaba.android:tangram:3.3.6'
+    //fiterPopup
+    implementation 'com.github.ltym2016:FilterTabView:1.2.2'
+
+
     //内存检查工具
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.2'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
@@ -49,5 +53,14 @@ dependencies {
     debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.2'
 
     //json工具
-    implementation 'com.alibaba:fastjson:1.2.56'
+    //implementation 'com.alibaba:fastjson:1.2.56'
+    //jdom2
+    //implementation 'org.jdom:jdom2:2.0.6'
+    //解析excel
+    //implementation 'net.sourceforge.jexcelapi:jxl:2.6.12'
+    //vlayout
+    //implementation('com.alibaba.android:vlayout:1.2.8@aar') {
+    //    transitive = true
+    //}
+
 }

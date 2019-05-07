@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cn.nj.putian.newodnclient">
+    package="com.cn.nj.putian.newodnclient"
+    android:versionCode="1"
+    android:versionName="1.0.0">
 
     <application
         android:name=".base.APPController"
@@ -20,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.login.view.LoginActivity" />
-        <activity android:name=".ui.login.view.SettingNetActivity"></activity>
+        <activity android:name=".ui.login.view.SettingNetActivity" />
+        <activity android:name=".ui.main.view.FirstActivity" android:theme="@style/activity_noActionBar"/>
     </application>
 
 </manifest>

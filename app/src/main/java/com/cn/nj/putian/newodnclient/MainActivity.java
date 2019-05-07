@@ -20,7 +20,7 @@ import java.util.TimerTask;
  * 第一启动的画面，初始化数据等
  * 3秒后，到下个页面
  */
-public class MainActivity extends AppCompatActivity {
+public final class MainActivity extends AppCompatActivity {
 
     private Timer timer;
     private int count = 0;
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 if(count == 4)
                 {
                     //去登陆页面
-                    intent.setClass(MainActivity.this,SettingNetActivity.class);
+                    intent.setClass(MainActivity.this,LoginActivity.class);
                     startActivity(intent);
                     finish();
                 }

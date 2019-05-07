@@ -12,17 +12,14 @@ import com.cn.nj.putian.newodnclient.ui.login.contract.SettingNetContract;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import org.jdom2.Document;
-import org.jdom2.Element;
-import org.jdom2.output.Format;
-import org.jdom2.output.XMLOutputter;
+
 
 
 /**
  * 设置ip地址的业务实现
  * @author zhaol
  */
-public class SettingNetPresenter extends BasePresenter<SettingNetContract.View> implements SettingNetContract.Presenter {
+public final class SettingNetPresenter extends BasePresenter<SettingNetContract.View> implements SettingNetContract.Presenter {
 
     private SharedPerFacade sharedFacade;
 
@@ -49,7 +46,7 @@ public class SettingNetPresenter extends BasePresenter<SettingNetContract.View> 
     @Override
     public boolean checkPort(String port) {
         //验证端口号,必须时数字
-        // 要验证的字符串（port）
+        //要验证的字符串（port）
         String regEx = "^[0-9]{4,10}$";
         // 编译正则表达式
         Pattern pattern = Pattern.compile(regEx);
@@ -83,9 +80,9 @@ public class SettingNetPresenter extends BasePresenter<SettingNetContract.View> 
             url.append(":" + portString);
             url.append(CommonConst.SERVICE_URL);
             String service_url = url.toString();
-            String xml = isConnectWebServiceParam(ip);
+            //String xml = isConnectWebServiceParam(ip);
             NetService service = new NetService();
-            Map<String, String> map = service.isConnect("isConnectWebService", xml, service_url);
+            Map<String, String> map = service.isConnect("isConnectWebService", ip, service_url);
             String key = map.get("key");
             if("OK".equals(key)) {
                 //连接成功
@@ -113,17 +110,5 @@ public class SettingNetPresenter extends BasePresenter<SettingNetContract.View> 
                 getMvpView().finishActivity();
             }
         }
-    }
-
-    /**
-     * 连接服务器的xml
-     * @return
-     */
-    private String isConnectWebServiceParam(String ip) {
-        Element root = new Element("request");//根目录
-        Document doc = new Document(root);
-        root.addContent(new Element("ip").setText(ip));//新的元素
-        XMLOutputter xo = new XMLOutputter(Format.getCompactFormat()); // getPrettyFormat() 层次格式化
-        return xo.outputString(doc);
     }
 }
